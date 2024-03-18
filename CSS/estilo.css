@@ -1,0 +1,155 @@
+body{
+    background-color: orange; /* cor do plano de fundo da pagina */
+    /* overflow: hidden; <--- retira a barra de rolagem */
+}
+
+main .personagem{ /* coloquei main. pois todos os personagens estão dentro da classe main por isso usei o codigo personagens pois é nesses que vou mexer   */
+    display: none;
+    height: 100vh; /* vão ter uma altura de 100vh que é altura da tela do dispositivo que a pessoa ta utilizando */
+
+}
+
+#cabecalho{
+    width: 100%;
+    border: 1px solid #000;
+    text-align: center;
+    font-size: 15px;
+    background-color: orange;
+    position: fixed;
+}
+
+
+
+header li{
+    display: inline;
+    padding: 1% 8% 1% 8%;
+    font-weight: 300;
+    font-size: 21px;
+
+}
+
+
+
+main::after{
+    content: "";   /* adicionando conteudo para o after-colocado um elemento extra pelo css- sem precisar colocar pelo HTML  */
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 80vh;  
+}
+
+main .personagem.unico{
+    display: block;
+}
+
+
+main .imagem{
+    width: 100%;  /* ocupando 100% do tamanho da altura pag  */
+    height: 100%; /* ocupando 100% do tamanho da largura pag  */
+    object-fit: cover; /* imagem estava distorcida antes de utilizar o object-fit ->ele mantém as dimensoes de altura e largura  */
+    display: block;
+}
+
+.conteudo{
+    position: absolute; /* posicionar um elemento de forma absoluta na página, é como se destacassemos ele  */
+    top: 0;
+    left: 120px; /* 120 pixels afastado da esquerda  */
+
+    display: flex; /*  o elemento se comporta como se fosse um elemento de bloco */
+    flex-direction: column; /* colocando os elementos em coluna  */
+    justify-content: center; /* alinhar o conteudo verticalmente-  */
+    min-height: 100vh; /* altura minima de 100  */
+    max-width: 380px;
+    z-index: 1; /* eixo de profundidade quero que o elemento fique por cima de um z-index  */
+
+}
+
+div .videog{
+    justify-content: center;
+    display: flex;
+
+}
+
+.conteudo .nome-personagem{
+    color: #fff; /* mudar a cor do texto  */
+    font-size: 48px; /* tamanho da fonttr  */
+    font-family: "Secular One"; /* estilo da fonte  */
+    font-weight: 400; /* "Peso" da fonte - define se vai ser mais grossa ou mais fina  */
+    margin-bottom: 20px; /* um espaçamento na margem entre os elementos só embaixo(bottom)  */
+}
+
+.conteudo .descricao{
+    color: #fff;
+    font-family: "Rubik";
+    font-size: 16px;
+    line-height: 24px; /* altura entre as linhas - separa as linhas uma da outra deixando um espaço de respiro  */
+    font-weight: bolder;
+}
+
+.conteudo .logo{
+    background-image: url(../IMAGENS/logo\ dbz\ novo.png); /* tipo botar um papel de parede - elemento sem altura e largura o elemento nao aparece */
+    height: 100px;
+    width: 230px;
+    background-size: cover;
+}
+
+.botoes{
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 180px;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px; /* GAP- espaçamento quando utilizamos o display flex */
+    background-color: rgba(0, 0, 0, 0.2); /* escolhi as cores primeiras como 0,0,0 pois é o preto já o ultimo 0.3(alpha) é a opacidade */
+}
+
+.botoes .botao {
+    border: none; /* retirando a borda dos botoes */
+    background: none; /* retirando o background dos botoes  */
+    cursor: pointer;  /* mãozinha do mouse aparece  */
+    list-style: none;
+    border: 2px solid #000;
+}
+
+.botoes .botao:hover{
+    background-color: #000 ;
+    border: 5px solid #000
+}
+
+
+
+#fechamento, #rodape {
+    height: 10%;
+    text-align: center;
+    border: 2px solid #000;
+    margin-top: 1%;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #fff;
+    background-color: black;
+    color: #fff;
+    font-weight: lighter;
+}
+
+a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+a.clique{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    background-color: #000;
+}
+
+a.clique:hover{
+    border: 1px solid;
+}
+

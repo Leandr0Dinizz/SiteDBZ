@@ -1,0 +1,10 @@
+*{
+    margin: 0;     /*margin do CSS define a área de margem nos quatro lados do elemento. */
+    padding: 0;   /* espaçamento interno dos elementos   */
+    box-sizing: border-box; /* facilitar a vida de altura e largura usando CSS   */
+    
+}
+
+ul{
+    list-style: none; /* retirando as bolinhas ao lado da lista */
+}
